@@ -1,0 +1,31 @@
+docker => docker cli command
+run => docker çalıştırma komutu
+-d => çalıştırmayı background da yap herhangi bir log basma
+-p => şu portta çalıştır
+ps => çalışan containerları göster
+ps -a => tüm containerları göster
+logs [CONTAINERID or PARTID] => docker loğlarını gösterir
+attach [CONTAINERID or PARTID] => loğlarına bağlanıyor
+exec -it (interactive terminal) [CONTAINERID or PARTID] (ls or pwd or bash) => container içine erişiyoruz
+cd /usr/share/nginx/html => html dosyalarına eriş
+Linux => apt-get update && apt-get install -y vim => vim editörünü kurar
+Linux => vim index.html => cmd de index html'i açar 
+Linux => a => editlemeyi açar 
+Linux => Esc => editlemeden çıkar
+Linux => :w => değişikliği kaydeder 
+Linux => :qa => editörden çıkar
+Linux => :wq => kaydet ve çık
+commit [CONTAINERID or PARTID] [new-container-name]
+run -d -p 1235:80 [new-container-name] => commitlediğimiz container'ın birebir kopyasını oluşturur
+images => image listesini gösteriyor
+tag => image'in tagını değiştirmemize yarıyordu
+rmi [imageName:version or imageId] => Id veya versionu verdiğin image'i siliyor. 
+inspect [imageName] => image'e ait bilgileri json olarak getiriyor
+pull [imageName] => image olarak indirir
+
+docker run hello-world
+docker run nginx
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=Udemy#123" -e "MSSQL_PID=Evaluation" -p 1433:1433  --name sqlpreview --hostname sqlpreview mcr.microsoft.com/mssql/server:2022-preview-ubuntu-22.04
+docker run -d --name=grafana -p 3000:3000 grafana/Grafana
+
+mssql connection: Data Source=localhost;Initial Catalog=PodcastDb;User ID=sa;Password=Udemy#123;Connect Timeout=30;Encrypt=True;Integrated Security=False;TrustServerCertificate=True
