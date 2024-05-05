@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "First.WEBAPI", "First.WEBAPI.csproj", "{33FCBBF6-36AC-438D-8E97-748A7DF7E55A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "First.WEBAPI", "First.WEBAPI.csproj", "{33FCBBF6-36AC-438D-8E97-748A7DF7E55A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "First.ConsoleApp", "..\First.ConsoleApp\First.ConsoleApp.csproj", "{49A773A5-B516-4EAC-8A51-30BFC4E7A386}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "First.HealthCheckWebAPI", "..\First.HealthCheckWebAPI\First.HealthCheckWebAPI.csproj", "{BA93F19F-9342-415B-85F5-264B3DE230F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{33FCBBF6-36AC-438D-8E97-748A7DF7E55A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33FCBBF6-36AC-438D-8E97-748A7DF7E55A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33FCBBF6-36AC-438D-8E97-748A7DF7E55A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49A773A5-B516-4EAC-8A51-30BFC4E7A386}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49A773A5-B516-4EAC-8A51-30BFC4E7A386}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49A773A5-B516-4EAC-8A51-30BFC4E7A386}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49A773A5-B516-4EAC-8A51-30BFC4E7A386}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA93F19F-9342-415B-85F5-264B3DE230F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA93F19F-9342-415B-85F5-264B3DE230F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA93F19F-9342-415B-85F5-264B3DE230F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA93F19F-9342-415B-85F5-264B3DE230F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

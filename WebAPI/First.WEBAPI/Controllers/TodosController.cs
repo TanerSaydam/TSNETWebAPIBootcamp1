@@ -1,9 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 
 namespace First.WEBAPI.Controllers;
 [Route("api/[controller]")]
 [ApiController]
+//[EnableRateLimiting("fixed")]
 public sealed class TodosController : ControllerBase
 {
     [HttpPost]
@@ -16,9 +19,29 @@ public sealed class TodosController : ControllerBase
         //provider key
     }
 
-    [HttpGet]
-    public IActionResult GetAll()
+    [HttpGet]    
+    public async Task<IActionResult> GetAll(CancellationToken cancellationToken = default)
     {
+        var httpContext = HttpContext; //10:35 görüşelim
+
+        //Task.Run(() =>
+        //{
+        //    Console.WriteLine("First");
+        //}, default);
+
+        //Task.Run(() =>
+        //{
+        //    Console.WriteLine("Second");
+        //}, default);
+
+        //HttpClient httpClient = new();
+        //await httpClient.GetAsync("");
+
+        //await Task.Delay(10000);
+
+
+        await Task.CompletedTask;
+
         return Ok(new List<string>()
         {
             "Taner","Ahmet","Ayşe"

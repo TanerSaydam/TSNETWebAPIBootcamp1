@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test HTML</title>
 </head>
+
 <body>
     <h1>Welcome Test HTML</h1>
 
     <button onclick="apiRequest()">API request yap</button>
 
     <script>
-        function apiRequest(){
-            fetch("https://localhost:7107/api/Todos").then(res=> res.json()).then(data=> {
-            console.log(data);
-        })
+        function apiRequest() {
+            fetch("https://localhost:7169/api/Personels/GetAll").then(res => res.json()).then(data => {
+                    console.log(data);
+                })
         }
-       
+
     </script>
 
 </body>
+
 </html>
