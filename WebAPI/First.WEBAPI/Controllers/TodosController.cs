@@ -55,7 +55,7 @@ public sealed class TodosController : ControllerBase
     }
 
     [HttpDelete("{id}")] //silme işlemleri temsili
-    public IActionResult Delete(int id)
+    public IActionResult Delete(UserDto userDto, int id)
     {
         return NoContent();
     }
