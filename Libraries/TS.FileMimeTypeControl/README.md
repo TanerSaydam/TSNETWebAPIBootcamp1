@@ -5,13 +5,13 @@ Bu paket ile requesten aldýðýnýz **IFormFile** dosyalarýný jpg ve png için type 
 
 ## Usage
 ```csharp
-bool checkfileForJpg = file.CheckForJpg(); //baþarýsýz ise false döner 
-bool checkfileForPng = file.CheckForPng(); //baþarýsýz ise false döner
+bool checkfileForJpg = file.CheckForJpg(); //basarisiz ise false döner 
+bool checkfileForPng = file.CheckForPng(); //basarisiz ise false döner
 ```
 
 
 ## Resource Code
-```chsarp
+```csharp
 public static class ExtensionMethods
 {
     public static bool CheckForJpg(this IFormFile file)
