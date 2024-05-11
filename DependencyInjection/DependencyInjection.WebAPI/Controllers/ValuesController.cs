@@ -28,7 +28,7 @@ public class ValuesController : ControllerBase
     //{
     //    var result = _product.Name;
     //    return Ok();
-    //}
+    //} //15:05 görüşelim
 }
 
 public class Product

@@ -1,24 +1,15 @@
-using DependencyInjection.WebAPI.Controllers;
+using Middleware.WebAPI.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddScoped<Product>();
-builder.Services.AddScoped<Test>();
-
-builder.Services.AddScoped<ICache, RedisCache>();
-
-//builder.Services.AddTransient<Product>(); //=> Dependency Injection
-//builder.Services.AddSingleton<Product>();
-
+//builder.Services.AddScoped<Middlewares>();
+builder.Services.AddTaner();
+builder.Services.AddCors();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.CreateService();
-
 var app = builder.Build();
-
 
 if (app.Environment.IsDevelopment())
 {
@@ -31,5 +22,19 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+//app.UseHealthChecks();
+
+app.UseCors();
+
+app.UseTaner();
+
+//app.Use(async (context, next) =>
+//{
+//    context.Response.StatusCode = 409;
+//    //await next.Invoke();
+//    await next();
+    
+//});
 
 app.Run();
