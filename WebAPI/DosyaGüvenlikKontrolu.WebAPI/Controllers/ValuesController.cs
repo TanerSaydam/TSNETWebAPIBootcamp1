@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using TS.FileMimeTypeControl;
 
 namespace DosyaGüvenlikKontrolu.WebAPI.Controllers;
 [Route("api/[controller]")]
@@ -14,7 +15,8 @@ public class ValuesController : ControllerBase
         //70, 90, 144=> exe
 
 
-        bool checkFile = file.CheckFileForJpg();
+        bool checkFile1= file.CheckForJpg();
+        bool checkFile2 = file.CheckForPng();
 
         //using(var stream = new MemoryStream())
         //{
@@ -24,27 +26,27 @@ public class ValuesController : ControllerBase
 
         //jpg ve png formatlarını bekliyorum!
 
-        return NoContent();
+        return NoContent(); //14:15 görüşelim
     }
 }
 
 
-public static class Extensions
-{
-    public static bool CheckFileForJpg(this IFormFile file)
-    {
-        using (var stream = new MemoryStream())
-        {
-            file.CopyTo(stream);
-            byte[] fileBytes = stream.ToArray();
-            string jpgValue = fileBytes[0].ToString() + fileBytes[1].ToString() + fileBytes[2].ToString();
+//public static class Extensions
+//{
+//    public static bool CheckFileForJpg(this IFormFile file)
+//    {
+//        using (var stream = new MemoryStream())
+//        {
+//            file.CopyTo(stream);
+//            byte[] fileBytes = stream.ToArray();
+//            string jpgValue = fileBytes[0].ToString() + fileBytes[1].ToString() + fileBytes[2].ToString();
 
 
-            if(jpgValue != "255216255")
-            {
-                return false;
-            }
-        }
-        return true;
-    }
-}
+//            if(jpgValue != "255216255")
+//            {
+//                return false;
+//            }
+//        }
+//        return true;
+//    }
+//}

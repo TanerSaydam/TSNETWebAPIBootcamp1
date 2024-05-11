@@ -4,10 +4,40 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>TS.FileMimeTypeControl</PackageId>
+    <Version>1.0.1</Version>
+    <Authors>Taner Saydam</Authors>
+    <Company>Taner saydam</Company>
+    <Product>TS.FileMimeTypeControl</Product>
+    <Description>With this package, you can easily type check your files.</Description>
+    <PackageIcon>icon.jpg</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/TanerSaydam/TSNETWebAPIBootcamp1.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>file,mimetype,control</PackageTags>
+    <Copyright></Copyright>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="icon.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
