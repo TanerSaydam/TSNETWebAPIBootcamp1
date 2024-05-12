@@ -21,5 +21,6 @@ public sealed class MyExceptionHandler : IExceptionHandler
         await httpContext.Response.WriteAsync(result);
 
         return true;
+
     }
 }

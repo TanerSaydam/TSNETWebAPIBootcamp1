@@ -1,11 +1,21 @@
 # TS .NET WebAPI Bootcamp 1
 
-## 12.05.2024 (Gelecek ders)
-- Middleware devam ediyoruz
+## 18.05.2024 (Gelecek ders)
+- Authentication / Authoization (JWT)
+- Options Pattern
+- .NET User Secret Services / AWS Secrets Manager
 - Mininal API
 - API Version
 - Dapper
 - Entity Framework Core
+- Automapper
+- Fluent Validation
+
+## 12.05.2024
+- Middleware devam ediyoruz
+- Filters
+- Exception Handler
+- Result Pattern
 
 ## 11.05.2024
 - Dosya güvenliği
