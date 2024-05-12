@@ -1,17 +1,28 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Middleware.WebAPI.Filters;
 
 namespace Middleware.WebAPI.Controllers;
 [Route("api/[controller]/[action]")]
 [ApiController]
 public class ValuesController : ControllerBase
 {
-    [HttpGet]
-    public IActionResult Method()
+    [HttpPost]
+    [MyAuthorize]
+    //[Log1]
+    //[Log2]
+    public IActionResult Method(User user)
     {
         var context = HttpContext;
-        return Ok();
+        return Ok(new {Message = "API is working...", Note= "Something..."});
     }
+}
+
+public class User
+{
+    public string Name { get; set; } = string.Empty;
+    public string Email { get; set; } = string.Empty;
+    public string Password { get; set; } = string.Empty;
 }
 
 
