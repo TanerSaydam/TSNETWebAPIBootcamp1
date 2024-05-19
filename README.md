@@ -1,13 +1,16 @@
 # TS .NET WebAPI Bootcamp 1
 
-## 19.05.2024 (Gelecek ders)
+## 25.05.2024 (Gelecek ders)
+- Entity Framework Core
+- Automapper
+- Fluent Validation
+
+## 19.05.2024
 - .NET User Secret Services / AWS Secrets Manager
 - Mininal API
 - API Version
 - Dapper
-- Entity Framework Core
-- Automapper
-- Fluent Validation
+- Entity Framework Core (Başladık)
 
 ## 18.05.2024 
 - Authentication / Authoization (JWT)

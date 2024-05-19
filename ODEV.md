@@ -1,3 +1,12 @@
+# 19.05.2024 Ödev
+- eTicaret projemize Authentication ve Authoizarion işlemleri ekleyin
+-- User modeli oluşturun
+-- Register metodu yazın ve buna 2 version ekleyin
+-- MinimalAPI ile login metodu yazın
+-- JWT ile token üretip Login işlemi sonrası dönün
+-- Authorize attribute ile giriş ve yetki kontrolü yapın
+- eTicaret projemizi Dapper ile Database'e bağlayıp CRUD işlemlerini yazın
+
 # 12.05.2024 Ödev
 - Result pattern için kendinize ait bir NuGet package yazın (Tüm projelerinizde kullanabileceğiniz)
 - eTicaret projemize result pattern'ı giydirin ve en az 1 hata fırlatın

@@ -1,3 +1,5 @@
+using Amazon.SecretsManager;
+using Amazon.SecretsManager.Model;
 using AuthenticationVeAuthorization.WebAPI.Options;
 using AuthenticationVeAuthorization.WebAPI.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -7,6 +9,14 @@ using Microsoft.OpenApi.Models;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var secret = await GetSecret();
+
+var config = new ConfigurationBuilder()
+    .AddJsonStream(new MemoryStream(Encoding.UTF8.GetBytes(secret)))
+    .Build();
+
+builder.Configuration.AddConfiguration(config);
 
 builder.Services.AddControllers();
 
@@ -69,3 +79,28 @@ app.UseHttpsRedirection();
 app.MapControllers();
 
 app.Run();
+
+
+static async Task<string> GetSecret()
+{
+    IAmazonSecretsManager client = new AmazonSecretsManagerClient();
+
+    GetSecretValueRequest request = new()
+    {
+        SecretId = "JWT2"
+    };
+
+    GetSecretValueResponse response;
+
+    try
+    {
+        response = await client.GetSecretValueAsync(request);
+    }
+    catch (Exception)
+    {
+
+        throw;
+    }
+
+    return response.SecretString;
+}
