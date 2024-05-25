@@ -2,4 +2,6 @@
 
 public sealed record CreateProductDto(
     string Name,
-    decimal Price);
+    decimal Price,
+    int Quantity,
+    string CategoryName);

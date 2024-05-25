@@ -1,9 +1,19 @@
 # TS .NET WebAPI Bootcamp 1
 
-## 25.05.2024 (Gelecek ders)
-- Entity Framework Core
+## 26.05.2024 (Gelecek ders)
+- EFCore İlişki yapıları
 - Automapper
 - Fluent Validation
+
+## 25.05.2024
+- Entity Framework Core
+- Context (Code first, DbFirst)
+- Linq Queries (Add, Update, Remove, ToList vs.)
+- Model Creating (IEntityTypeConfiguration)
+- Value Object (Bir örnekle değindik)
+- Smart Enum (Bir örnekle değindik)
+- Value Object ve Smart Enum'un EFCore CodeFirst ile işlenişi
+- Bire-çok ilişki için bir örnek yaptık yarın devam edeceğiz
 
 ## 19.05.2024
 - .NET User Secret Services / AWS Secrets Manager
