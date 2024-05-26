@@ -1,9 +1,14 @@
 # TS .NET WebAPI Bootcamp 1
 
-## 26.05.2024 (Gelecek ders)
-- EFCore İlişki yapıları
-- Automapper
+## 31.05.2024 (Gelecek ders)
 - Fluent Validation
+
+## 26.05.2024
+- EFCore İlişki yapıları
+- Bire çok ilişki
+- Çoka çok ilişki
+- Bire bir ilişki
+- Automapper
 
 ## 25.05.2024
 - Entity Framework Core
