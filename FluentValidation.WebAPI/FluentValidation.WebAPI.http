@@ -1,0 +1,28 @@
+
+//Baþarýsýz
+POST http://localhost:5052/api/values/create
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "d",
+  "description": "",
+  "price":0,
+  "quantity": 1
+}
+
+###
+
+//Baþarýlý
+POST http://localhost:5052/api/values/create
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Domates 1",
+  "description": "Bu bir domates",
+  "price":100,
+  "quantity": 1
+}
+
+###

@@ -1,6 +1,6 @@
 # TS .NET WebAPI Bootcamp 1
 
-## 31.05.2024 (Gelecek ders)
+## 31.05.2024 (Eğitimin son günü)
 - Fluent Validation
 
 ## 26.05.2024
